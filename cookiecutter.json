@@ -1,4 +1,6 @@
 {
-    "full_name": "Mohamad Hallak",
-    "version": "0.1"
+    "project_name": "project_name",
+    "author": "Mohamad Hallak",
+    "version": "0.1",
+    "python_version": "3.9"
 }
