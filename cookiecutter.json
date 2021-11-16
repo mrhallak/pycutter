@@ -2,5 +2,6 @@
     "project_name": "project_name",
     "author": "Mohamad Hallak",
     "version": "0.1",
-    "python_version": "3.9"
+    "python_version": "3.9",
+    "python_version_nodot": "39"
 }
