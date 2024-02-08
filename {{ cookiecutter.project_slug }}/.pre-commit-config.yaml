@@ -1,0 +1,11 @@
+{% if cookiecutter.use_ruff == 'y' -%}
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  # Ruff version.
+  rev: v{{ cookiecutter.ruff_version }}
+  hooks:
+    # Run the linter.
+    - id: ruff
+      args: [ --fix ]
+    # Run the formatter.
+    - id: ruff-format
+{% endif %}

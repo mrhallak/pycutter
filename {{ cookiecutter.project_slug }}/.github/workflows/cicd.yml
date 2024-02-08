@@ -1,0 +1,10 @@
+name: Ruff
+on: [ push, pull_request ]
+jobs:
+  ruff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      {% if cookiecutter.use_ruff == 'y' -%}
+      - uses: chartboost/ruff-action@v1
+      {% endif %}

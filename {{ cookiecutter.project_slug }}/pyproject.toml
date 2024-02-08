@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "{{cookiecutter.project_slug}}"
+name = "{{ cookiecutter.project_slug }}"
 version = "0.0.1"
-description = "{{cookiecutter.project_description}}"
-authors = ["{{cookiecutter.author}} <f{{cookiecutter.email}}>"]
-repository = "https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}"
-documentation = "https://{{cookiecutter.author_github_handle}}.github.io/{{cookiecutter.project_name}}/"
+description = "{{ cookiecutter.project_description }}"
+authors = ["{{ cookiecutter.author }} <f{{cookiecutter.email }}>"]
+repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repo }}"
+documentation = "https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.github_repo }}/"
 readme = "README.md"
 packages = [
   {include = "{{cookiecutter.project_slug}}"}
@@ -15,11 +15,42 @@ python = "^{{ cookiecutter.python_version }}"
 
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^{{ cookiecutter.pytest_version }}"
+pre-commit = "^3.4.0"
+{% if cookiecutter.use_pytest == 'y' -%}
+pytest="^{{ cookiecutter.pytest_version }}"
+{% endif %}
+{% if cookiecutter.use_ruff == 'y' -%}
+ruff="^{{ cookiecutter.ruff_version }}"
+{% endif %}
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core=={{ cookiecutter.poetry_version }}"]
 build-backend = "poetry.core.masonry.api"
 
+{% if cookiecutter.use_pytest == 'y' -%}
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+{% endif %}
+
+{% if cookiecutter.use_ruff == 'y' -%}
+[tool.ruff]
+# Same as Black.
+line-length = 88
+indent-width = 4
+fix = true
+
+target-version = "{{ cookiecutter.python_version_nodot}}"
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
+
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
+
+# Like Black, respect magic trailing commas.
+skip-magic-trailing-comma = false
+
+# Like Black, automatically detect the appropriate line ending.
+line-ending = "auto"
+{% endif %}

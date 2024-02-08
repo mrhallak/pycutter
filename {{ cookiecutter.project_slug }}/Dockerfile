@@ -1,5 +1,5 @@
 # Use an official Python runtime as a base image
-FROM python:{{ cookiecutter.python_version }}-slim-buster
+FROM python:{{ cookiecutter.python_version }}-slim
 
 RUN mkdir /app
 
