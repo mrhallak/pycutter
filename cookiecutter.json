@@ -1,9 +1,0 @@
-{
-    "project_name": "project_name",
-    "author": "Mohamad Hallak",
-    "github_username": "mrhallak",
-    "github_repo": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
-    "version": "0.1",
-    "python_version": "3.9",
-    "python_version_nodot": "{{ cookiecutter.python_version.lower().replace('.', '') }}"
-}

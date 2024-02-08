@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "{{cookiecutter.project_slug}}"
+version = "0.0.1"
+description = "{{cookiecutter.project_description}}"
+authors = ["{{cookiecutter.author}} <f{{cookiecutter.email}}>"]
+repository = "https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}"
+documentation = "https://{{cookiecutter.author_github_handle}}.github.io/{{cookiecutter.project_name}}/"
+readme = "README.md"
+packages = [
+  {include = "{{cookiecutter.project_slug}}"}
+]
+
+[tool.poetry.dependencies]
+python = "^{{ cookiecutter.python_version }}"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^{{ cookiecutter.pytest_version }}"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
