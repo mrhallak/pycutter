@@ -39,7 +39,7 @@ line-length = 88
 indent-width = 4
 fix = true
 
-target-version = "{{ cookiecutter.python_version_nodot}}"
+target-version = "py{{ cookiecutter.python_version_nodot}}"
 
 [tool.ruff.format]
 # Like Black, use double quotes for strings.

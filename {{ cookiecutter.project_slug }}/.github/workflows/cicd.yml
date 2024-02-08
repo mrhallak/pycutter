@@ -1,10 +1,21 @@
-name: Ruff
-on: [ push, pull_request ]
+name: CI/CD Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - "*"
 jobs:
-  ruff:
+  container-test-job:
     runs-on: ubuntu-latest
+    container:
+      image: Dockerfile
     steps:
-      - uses: actions/checkout@v3
       {% if cookiecutter.use_ruff == 'y' -%}
-      - uses: chartboost/ruff-action@v1
+      - name: Check Python Code Formatting
+        run: poetry run ruff check --output-format=github .
       {% endif %}
+      - name: Run Pytest Tests
+        run: poetry run pytest
