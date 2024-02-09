@@ -1,3 +1,4 @@
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 ![compatiblepy](https://img.shields.io/pypi/pyversions/cookiecutter)
 [![GitHub](https://img.shields.io/github/license/mrhallak/pycutter)](https://github.com/mrhallak/pycutter)
 
