@@ -21,7 +21,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install poetry
-          poetry install
-
-      - name: Check Python Code Formatting
-        run: poetry run ruff check --output-format=github .
+          poetry install --no-root
+      - name: Install dependencies
+        run: poetry run cookiecutter --directory . --no-input

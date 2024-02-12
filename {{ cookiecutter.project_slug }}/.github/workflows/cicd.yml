@@ -20,7 +20,7 @@ jobs:
           file: Dockerfile
           push: false
           tags: |
-            ${{ github.sha }}
+            {{ cookiecutter.project_slug }}
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
@@ -30,7 +30,6 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install poetry
           poetry install
-
       {% if cookiecutter.use_ruff == 'y' -%}
       - name: Check Python Code Formatting
         run: poetry run ruff check --output-format=github .
