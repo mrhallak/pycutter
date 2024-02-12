@@ -7,15 +7,34 @@ on:
   pull_request:
     branches:
       - "*"
+
 jobs:
-  container-test-job:
+  build:
     runs-on: ubuntu-latest
-    container:
-      image: Dockerfile
     steps:
+      - uses: actions/checkout@v3
+      - name: Build Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: Dockerfile
+          push: false
+          tags: |
+            ${{ github.sha }}
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.11
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install poetry
+          poetry install
+
       {% if cookiecutter.use_ruff == 'y' -%}
       - name: Check Python Code Formatting
         run: poetry run ruff check --output-format=github .
       {% endif %}
-      - name: Run Pytest Tests
-        run: poetry run pytest
+
+      - name: Run Pytest
+        run: poetry run pytest -v

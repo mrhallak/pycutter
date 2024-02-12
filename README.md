@@ -8,7 +8,7 @@ A python project template using cookiecutter.
 
 ## Dependencies
 This requires [cookiecutter](https://github.com/cookiecutter/cookiecutter) to be installed. You can install this using the command below:
-```
+```bash
 pip install cookiecutter
 ```
 
