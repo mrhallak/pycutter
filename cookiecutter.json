@@ -1,9 +1,23 @@
 {
     "project_name": "project_name",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_description": "This is a template repository for Python projects that use Poetry for their dependency management.",
     "author": "Mohamad Hallak",
+    "email": "16711801+mrhallak@users.noreply.github.com",
     "github_username": "mrhallak",
-    "github_repo": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
-    "version": "0.1",
-    "python_version": "3.9",
-    "python_version_nodot": "{{ cookiecutter.python_version.lower().replace('.', '') }}"
+    "github_repo": "{{ cookiecutter.project_slug }}",
+    "version": "0.0.1",
+    "python_version": "3.11",
+    "python_version_nodot": "{{ cookiecutter.python_version.lower().replace('.', '') }}",
+    "poetry_version": "1.9.0",
+    "use_pytest": [
+        "y",
+        "n"
+    ],
+    "pytest_version": "8.0.0",
+    "use_ruff": [
+        "y",
+        "n"
+    ],
+    "ruff_version": "0.2.1"
 }

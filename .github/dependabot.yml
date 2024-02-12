@@ -6,9 +6,12 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 10
-    target-branch: dev
     reviewers:
       - "mrhallak"
     allow:
       - dependency-type: direct
       - dependency-type: indirect
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: weekly
