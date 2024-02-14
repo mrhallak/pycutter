@@ -4,15 +4,7 @@
 
 # Pycutter
 
-A python project template using cookiecutter.
+Pycutter is designed to streamline the setup process for Python projects. By leveraging the power of [Cookiecutter](https://github.com/cookiecutter/cookiecutter), it provides a standardized project structure and pre-configured settings, allowing developers to focus on coding rather than project setup.
 
-## Dependencies
-This requires [cookiecutter](https://github.com/cookiecutter/cookiecutter) to be installed. You can install this using the command below:
-```bash
-pip install cookiecutter
-```
-
-## Running
-```bash
-cookiecutter pycutter
-```
+## Documentation
+* [Setup](./docs/SETUP.md)
