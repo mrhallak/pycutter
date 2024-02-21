@@ -10,7 +10,6 @@ updates:
       - "mrhallak"
     allow:
       - dependency-type: direct
-      - dependency-type: indirect
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
