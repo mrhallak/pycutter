@@ -15,7 +15,7 @@ python = "^{{ cookiecutter.python_version }}"
 
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^3.4.0"
+pre-commit = "^3.7.0"
 {% if cookiecutter.use_pytest == 'y' -%}
 pytest="^{{ cookiecutter.pytest_version }}"
 {% endif %}
