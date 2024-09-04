@@ -14,10 +14,10 @@
         "y",
         "n"
     ],
-    "pytest_version": "8.1.1",
+    "pytest_version": "8.3.2",
     "use_ruff": [
         "y",
         "n"
     ],
-    "ruff_version": "0.3.7"
+    "ruff_version": "0.6.3"
 }
