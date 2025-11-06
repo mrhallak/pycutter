@@ -1,0 +1,6 @@
+- Docker file
+- Configure ruff
+- Configure ty
+- Dependabot
+- CI/CD
+- Add shields

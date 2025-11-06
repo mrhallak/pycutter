@@ -1,18 +1,16 @@
-[tool.poetry]
+[project]
 name = "pycutter"
 version = "0.1.0"
-description = ""
-authors = ["Mohamad Hallak <16711801+mrhallak@users.noreply.github.com>"]
+description = "My cookiecutter template"
 readme = "README.md"
+authors = ["Mohamad Hallak <16711801+mrhallak@users.noreply.github.com>"]
+requires-python = ">=3.13"
+dependencies = []
 
-[tool.poetry.dependencies]
-python = "^3.11"
-cookiecutter = "^2.6.0"
-
-
-[tool.poetry.group.dev.dependencies]
-pre-commit = "^4.3.0"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+dev = [
+    "pre-commit>=4.3.0",
+    "pytest>=8.4.2",
+    "ruff>=0.14.3",
+    "ty>=0.0.1a25",
+]
