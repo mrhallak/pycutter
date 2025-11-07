@@ -4,3 +4,6 @@
 - Dependabot
 - CI/CD
 - Add shields
+- Add codecov
+- Add versioning
+- Add makefile

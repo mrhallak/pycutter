@@ -3,7 +3,7 @@ name = "pycutter"
 version = "0.1.0"
 description = "My cookiecutter template"
 readme = "README.md"
-authors = ["Mohamad Hallak <16711801+mrhallak@users.noreply.github.com>"]
+authors = [{ name = "Mohamad Hallak", email="16711801+mrhallak@users.noreply.github.com"}]
 requires-python = ">=3.13"
 dependencies = []
 
@@ -11,6 +11,7 @@ dependencies = []
 dev = [
     "pre-commit>=4.3.0",
     "pytest>=8.4.2",
+    "pytest-codecov>=0.7.0",
     "ruff>=0.14.3",
     "ty>=0.0.1a25",
 ]
